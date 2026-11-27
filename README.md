@@ -1,6 +1,12 @@
-# file-governance
+<p align="center">
+  <img src="assets/brand/banner.png" width="640" alt="file-governance">
+</p>
 
-一个给 Claude Code / Codex 等 AI 编码工具用的 skill：治理 AI 做 vibe coding 时堆出来的文件。
+<p align="center">
+  把 AI 堆出来的文件，收拾成<b>一份正本</b>、<b>一份日志</b>、<b>一份公共资产</b>。
+</p>
+
+---
 
 AI 很会写代码，也很会堆文件——`讲稿final.md`、`讲稿final-v2.md`、`讲稿final-真的最终版.md`、三个只差几十字节的 `draft/` 副本，散落在桌面和设备上。时间一长，人和 AI 都说不清哪份是能用的。
 
@@ -8,9 +14,25 @@ AI 很会写代码，也很会堆文件——`讲稿final.md`、`讲稿final-v2.
 
 ## 三条核心
 
-1. **每个项目一份正本。** `1-产出/` 里那份是唯一有效的，其余都是过程。
-2. **每个项目一份日志。** `项目日志.md` 记「改了什么 / 改了哪里 / 为什么 / 来源」，倒序排列，素材出处和 NAS 路径也记在这里。
-3. **公共资产只留一份。** 品牌 logo、BGM、字体这类跨项目复用的东西放公共区，项目里引用路径，不复制。
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <img src="assets/icons/package-check.svg" width="24"><br>
+      <b>一份正本</b><br>
+      <sub><code>1-产出/</code> 里那份说了算</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/icons/notebook-pen.svg" width="24"><br>
+      <b>一份日志</b><br>
+      <sub>改了什么、为什么、素材从哪来</sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/icons/boxes.svg" width="24"><br>
+      <b>一份公共资产</b><br>
+      <sub>品牌、BGM、字体放公共区</sub>
+    </td>
+  </tr>
+</table>
 
 ## 六条铁律
 
@@ -35,12 +57,13 @@ AI 很会写代码，也很会堆文件——`讲稿final.md`、`讲稿final-v2.
 └── 9-归档/          被取代的旧版本
 ```
 
-**编号为什么跳过 5 到 8**：`1` 到 `4` 是常用的四类，`5` 到 `8` 有意留空，以后要加「5-交付」「6-评审」这类新类别时直接占号，不必把 `9-归档` 改成 `10-归档` 再全盘改引用。`9` 固定给归档，因此归档永远排在目录列表最后。
+> **编号为什么跳过 5 到 8**：`1` 到 `4` 是常用的四类，`5` 到 `8` 有意留空，以后要加「5-交付」「6-评审」这类新类别时直接占号，不必把 `9-归档` 改成 `10-归档` 再全盘改引用。`9` 固定给归档，因此归档永远排在目录列表最后。
 
 ## 两种工作流
 
-- **工作流 A · 新项目**：建骨架 → 写 README → 写项目日志 → 裁 `.gitignore` → 首次存档 → 登记索引。
-- **工作流 B · 存量整理**：先原样存档 → 按项目归拢 → 请用户确认正本 → 判断不了的加 `待确认-` 前缀 → 每步存档 → 结束时 `find . -name '待确认-*'` 必须为空。
+**工作流 A · 新项目**：建骨架 → 写 README → 写项目日志 → 裁 `.gitignore` → 首次存档 → 登记索引。
+
+**工作流 B · 存量整理**：先原样存档 → 按项目归拢 → 请用户确认正本 → 判断不了的加 `待确认-` 前缀 → 每步存档 → 结束时 `find . -name '待确认-*'` 必须为空。
 
 ## 目录内容
 
@@ -51,6 +74,8 @@ AI 很会写代码，也很会堆文件——`讲稿final.md`、`讲稿final-v2.
 | `references/git-plain-language.md` | 把 commit/push/分支翻译成人话，什么时候存档 |
 | `references/obsidian-index.md` | 本地文件夹、GitHub、Obsidian 三者的对应关系与 MOC 写法 |
 | `assets/project-template/` | 可直接复制的项目骨架 |
+| `assets/brand/` | 本仓库的横幅与标志 |
+| `assets/icons/` | README 用的 Lucide 图标（ISC） |
 | `scripts/check-project.sh` | 只读检查：缺什么目录、git 有没有、`待确认-` 是否清空、超大文件 |
 
 ## 安装
@@ -62,15 +87,7 @@ chmod +x ~/.claude/skills/file-governance/scripts/check-project.sh
 
 在 Claude Code 里用 `/file-governance` 调用，或者直接说「整理一下这个文件夹」「给这个项目建个正本」。
 
-## 关于桌面布局的假设
-
-`SKILL.md` 里的路径约定（`~/Desktop/桌面索引.md`、`【2】DO处理中/`、`【3】DONE归档区/`）来自作者自己的桌面结构。如果你不打算沿用，改 SKILL.md 里「六条铁律」第 6 条和工作流 A 第 1、6 步即可，其余规则与路径无关。
-
-## 它不管什么
-
-不做备份，不做多设备同步，不对 Obsidian 库执行 git 操作。这三件事各有各的工具，混进来会让规则变复杂。
-
-## 检查脚本示例
+## 检查脚本
 
 ```
 $ scripts/check-project.sh ~/Desktop/【2】DO处理中/某项目
@@ -82,3 +99,18 @@ $ scripts/check-project.sh ~/Desktop/【2】DO处理中/某项目
 
 结果：2 个问题，1 个注意
 ```
+
+## 关于桌面布局的假设
+
+`SKILL.md` 里的路径约定（`~/Desktop/桌面索引.md`、`【2】DO处理中/`、`【3】DONE归档区/`）来自作者自己的桌面结构。如果不打算沿用，改 SKILL.md 里「六条铁律」第 6 条和工作流 A 第 1、6 步即可，其余规则与路径无关。
+
+## 它不管什么
+
+不做备份，不做多设备同步，不对 Obsidian 库执行 git 操作。这三件事各有各的工具，混进来会让规则变复杂。
+
+---
+
+<p align="center">
+  <img src="assets/brand/logo.png" width="40"><br>
+  <sub>file-governance · 一份正本，一份日志，一份公共资产</sub>
+</p>
