@@ -1,5 +1,6 @@
 <p align="center">
-  <img src="assets/brand/banner.png" width="640" alt="file-governance">
+  <img src="assets/brand/banner-dark.png#gh-dark-mode-only" width="640" alt="file-governance">
+  <img src="assets/brand/banner.png#gh-light-mode-only" width="640" alt="file-governance">
 </p>
 
 <p align="center">
@@ -74,7 +75,7 @@ AI 很会写代码，也很会堆文件——`讲稿final.md`、`讲稿final-v2.
 | `references/git-plain-language.md` | 把 commit/push/分支翻译成人话，什么时候存档 |
 | `references/obsidian-index.md` | 本地文件夹、GitHub、Obsidian 三者的对应关系与 MOC 写法 |
 | `assets/project-template/` | 可直接复制的项目骨架 |
-| `assets/brand/` | 本仓库的横幅与标志 |
+| `assets/brand/` | 横幅与标志，暗色、浅色各一套 |
 | `assets/icons/` | README 用的 Lucide 图标（ISC） |
 | `scripts/check-project.sh` | 只读检查：缺什么目录、git 有没有、`待确认-` 是否清空、超大文件 |
 
@@ -111,6 +112,7 @@ $ scripts/check-project.sh ~/Desktop/【2】DO处理中/某项目
 ---
 
 <p align="center">
-  <img src="assets/brand/logo.png" width="40"><br>
+  <img src="assets/brand/logo-dark.png#gh-dark-mode-only" width="40">
+  <img src="assets/brand/logo.png#gh-light-mode-only" width="40"><br>
   <sub>file-governance · 一份正本，一份日志，一份公共资产</sub>
 </p>
