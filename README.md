@@ -17,17 +17,17 @@ AI 很会写代码，也很会堆文件——`讲稿final.md`、`讲稿final-v2.
 <table>
   <tr>
     <td align="center" width="33%">
-      <img src="assets/icons/package-check.svg" width="24"><br>
+      <img src="assets/icons/package-check-dark.svg#gh-dark-mode-only" width="24"><img src="assets/icons/package-check.svg#gh-light-mode-only" width="24"><br>
       <b>一份正本</b><br>
       <sub><code>1-产出/</code> 里那份说了算</sub>
     </td>
     <td align="center" width="33%">
-      <img src="assets/icons/notebook-pen.svg" width="24"><br>
+      <img src="assets/icons/notebook-pen-dark.svg#gh-dark-mode-only" width="24"><img src="assets/icons/notebook-pen.svg#gh-light-mode-only" width="24"><br>
       <b>一份日志</b><br>
       <sub>改了什么、为什么、素材从哪来</sub>
     </td>
     <td align="center" width="33%">
-      <img src="assets/icons/boxes.svg" width="24"><br>
+      <img src="assets/icons/boxes-dark.svg#gh-dark-mode-only" width="24"><img src="assets/icons/boxes.svg#gh-light-mode-only" width="24"><br>
       <b>一份公共资产</b><br>
       <sub>品牌、BGM、字体放公共区</sub>
     </td>
